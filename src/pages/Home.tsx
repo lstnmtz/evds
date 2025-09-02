@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Building2, Music, User, Star, Users } from 'lucide-react';
 
 const Home = () => {
+  const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
+
   const segments = [
     {
       id: 'entreprises',
@@ -40,8 +42,9 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-50 to-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section>
+        <div className="w-full">
+          {/*
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               En Vie de <span className="text-[#EC781D]">Sophro</span>
@@ -69,41 +72,58 @@ const Home = () => {
               </div>
             </div>
           </div>
+          */}
 
           {/* Three Equal Sections */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {segments.map((segment) => {
+          <div
+            className="flex w-screen overflow-hidden"
+            style={{ height: "calc(100vh - 100px)" }} // 100px = hauteur du Header
+          >
+            {segments.map((segment, idx) => {
               const IconComponent = segment.icon;
+              const isDimmed = hoveredIdx !== null && hoveredIdx !== idx;
+              const isHovered = hoveredIdx === idx;
               return (
                 <Link
                   key={segment.id}
                   to={segment.link}
-                  className={`group ${segment.color} ${segment.hoverColor} text-white rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl transform`}
+                  className="group/link flex flex-col h-full w-full p-0 transition-all duration-300 relative"
+                  style={{
+                    flex: isHovered ? 2 : 1,
+                    transition: "flex-grow 0.3s",
+                    minWidth: 0,
+                    background: "none",
+                  }}
+                  onMouseEnter={() => setHoveredIdx(idx)}
+                  onMouseLeave={() => setHoveredIdx(null)}
                 >
-                  <div className="relative h-48 mb-6 rounded-xl overflow-hidden">
-                    <img 
-                      src={segment.image} 
+                  <div className="relative h-full w-full overflow-hidden transition-all duration-300">
+                    <img
+                      src={segment.image}
                       alt={segment.title}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                      className={`w-full h-full object-cover transition-all duration-300 ${isDimmed ? "brightness-50" : "brightness-100"} ${isHovered ? "scale-110" : ""}`}
+                      style={{ height: "100%", width: "100%" }}
                     />
-                    <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-all duration-300"></div>
-                    <div className="absolute top-4 right-4 bg-white bg-opacity-20 p-3 rounded-full">
+                    <div className="absolute top-4 right-4 bg-white bg-opacity-20 p-3">
                       <IconComponent className="h-8 w-8 text-white" />
                     </div>
-                  </div>
-                  
-                  <h2 className={`text-2xl font-bold mb-4 ${segment.textColor || 'text-white'}`}>
-                    {segment.title}
-                  </h2>
-                  <p className={`text-lg mb-6 leading-relaxed ${segment.textColor || 'text-white'} opacity-90`}>
-                    {segment.description}
-                  </p>
-                  
-                  <div className="flex items-center space-x-2 group-hover:translate-x-2 transition-transform duration-300">
-                    <span className={`font-semibold ${segment.textColor || 'text-white'}`}>
-                      En savoir plus
-                    </span>
-                    <ArrowRight className={`h-5 w-5 ${segment.textColor || 'text-white'}`} />
+                    {/* Texte lié à l'image, affiché seulement au survol */}
+                    <div className="absolute bottom-8 left-8 z-10">
+                      <h2 className={`text-2xl font-bold mb-4 text-white drop-shadow-lg`}>
+                        {segment.title}
+                      </h2>
+                      {isHovered && (
+                        <p className={`text-lg mb-6 leading-relaxed text-white opacity-90 drop-shadow-lg`}>
+                          {segment.description}
+                        </p>
+                      )}
+                      <div className="flex items-center space-x-2 transition-transform duration-300 mt-auto">
+                        <span className="font-semibold text-white drop-shadow-lg">
+                          En savoir plus
+                        </span>
+                        <ArrowRight className="h-5 w-5 text-white drop-shadow-lg" />
+                      </div>
+                    </div>
                   </div>
                 </Link>
               );
@@ -149,11 +169,11 @@ const Home = () => {
             Prêt(e) à commencer votre parcours ?
           </h2>
           <p className="text-xl text-white opacity-90 mb-8">
-            Contactez-moi pour discuter de vos besoins et découvrir comment la sophrologie 
+            Contactez-moi pour discuter de vos besoins et découvrir comment la sophrologie
             peut vous accompagner vers vos objectifs.
           </p>
-          <Link 
-            to="/contact" 
+          <Link
+            to="/contact"
             className="inline-flex items-center space-x-2 bg-white text-[#EC781D] font-semibold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             <span>Contactez-moi</span>
