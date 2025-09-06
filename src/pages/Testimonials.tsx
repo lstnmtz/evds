@@ -9,27 +9,11 @@ const Testimonials = () => {
       color: 'bg-[#2362B0]',
       testimonials: [
         {
-          text: "Grâce aux ateliers de Bénédicte, l'ambiance de travail dans notre équipe s'est considérablement améliorée. Nos collaborateurs sont plus sereins et plus efficaces. L'absentéisme a diminué de 30% depuis la mise en place des séances de sophrologie.",
+          text: "Grâce à l'accompagnement de Bénédicte, notre équipe a vu une nette amélioration de la cohésion et de la gestion du stress. Les séances de sophrologie ont permis à chacun de mieux gérer les défis professionnels, ce qui a eu un impact positif sur notre productivité.",
           author: "Marie Dubois",
           position: "Directrice RH",
           company: "TechCorp Solutions",
           employees: "250 salariés",
-          rating: 5
-        },
-        {
-          text: "Les techniques de sophrologie nous ont aidés à mieux gérer la pression des projets. Nos équipes créatives sont moins stressées et plus innovantes. Un investissement qui s'est rapidement révélé rentable.",
-          author: "Jean-Luc Martin",
-          position: "Directeur Général",
-          company: "Agence Créative Plus",
-          employees: "45 salariés",
-          rating: 5
-        },
-        {
-          text: "L'approche de Bénédicte, enrichie par son expérience en entreprise, nous a permis de créer un programme de bien-être sur-mesure. Nos managers ont maintenant des outils concrets pour accompagner leurs équipes.",
-          author: "Sophie Leroy",
-          position: "Responsable Formation",
-          company: "Industries Modernes",
-          employees: "180 salariés", 
           rating: 5
         }
       ]
@@ -40,27 +24,11 @@ const Testimonials = () => {
       color: 'bg-[#FFCA08]',
       testimonials: [
         {
-          text: "Avant de rencontrer Bénédicte, je souffrais d'un trac paralysant avant chaque concert. Aujourd'hui, j'ai appris à transformer cette énergie en créativité. Mes concerts sont maintenant des moments de pur bonheur et ma technique s'est nettement améliorée.",
+          text: "Bénédicte m'a aidée à surmonter mon trac avant les concerts. Les techniques de respiration et de visualisation qu'elle m'a enseignées sont devenues des outils indispensables dans ma préparation. Je me sens plus confiante et sereine sur scène.",
           author: "Sophie Lemaire",
           position: "Violoniste professionnelle",
           company: "Orchestre Philharmonique",
           specialty: "Musique classique",
-          rating: 5
-        },
-        {
-          text: "Les techniques de sophrologie m'ont permis de retrouver ma spontanéité sur scène. Je me sens plus libre et authentique dans mon jeu. Ma mémoire s'est renforcée et je gère beaucoup mieux les imprévus pendant les représentations.",
-          author: "Marc Dubois",
-          position: "Comédien",
-          company: "Théâtre National",
-          specialty: "Théâtre contemporain",
-          rating: 5
-        },
-        {
-          text: "Grâce à l'accompagnement de Bénédicte, j'ai développé une meilleure conscience de mon corps et de ma respiration. Cela m'a permis d'améliorer ma présence scénique et de gérer efficacement les tournées stressantes.",
-          author: "Luna Silva",
-          position: "Chanteuse",
-          company: "Artiste indépendante",
-          specialty: "Pop/Folk",
           rating: 5
         }
       ]
@@ -71,35 +39,11 @@ const Testimonials = () => {
       color: 'bg-[#43A3DB]',
       testimonials: [
         {
-          text: "Après des années d'insomnie, j'ai enfin retrouvé des nuits complètes grâce aux techniques de Bénédicte. Les exercices sont simples à reproduire chez soi et vraiment efficaces. Ma qualité de vie s'est transformée.",
+          text: "Après seulement quelques mois de séances avec Bénédicte, j'ai retrouvé un sommeil réparateur. Ses conseils et exercices de sophrologie m'ont permis de réduire mon anxiété et d'améliorer ma qualité de vie au quotidien.",
           author: "Claire Martin",
           age: "34 ans",
           issue: "Troubles du sommeil",
           duration: "3 mois d'accompagnement",
-          rating: 5
-        },
-        {
-          text: "L'accompagnement m'a aidée à reprendre confiance en moi après une période difficile. Je me sens plus forte et sereine au quotidien. Les outils que j'ai appris me servent encore aujourd'hui, 2 ans après.",
-          author: "Marie Dupont",
-          age: "42 ans",
-          issue: "Confiance en soi",
-          duration: "6 mois d'accompagnement",
-          rating: 5
-        },
-        {
-          text: "Les séances m'ont donné des outils concrets pour gérer mon stress au travail et dans ma vie personnelle. Bénédicte a une approche très humaine et professionnelle. Je recommande vivement !",
-          author: "Thomas Leblanc",
-          age: "38 ans",
-          issue: "Gestion du stress",
-          duration: "4 mois d'accompagnement",
-          rating: 5
-        },
-        {
-          text: "Grâce à la sophrologie, j'ai développé une relation plus saine avec la nourriture et avec moi-même. L'accompagnement bienveillant de Bénédicte m'a permis de retrouver l'équilibre après des années de troubles alimentaires.",
-          author: "Émilie Rousseau",
-          age: "29 ans",
-          issue: "Troubles alimentaires",
-          duration: "8 mois d'accompagnement",
           rating: 5
         }
       ]
@@ -107,9 +51,9 @@ const Testimonials = () => {
   ];
 
   const stats = [
-    { number: "200+", label: "Personnes accompagnées", icon: User },
-    { number: "15", label: "Entreprises partenaires", icon: Building2 },
-    { number: "5", label: "Années d'expérience", icon: Star }
+    { number: "0", label: "Personnes accompagnées", icon: User },
+    { number: "0", label: "Entreprises partenaires", icon: Building2 },
+    { number: "0", label: "Années d'expérience", icon: Star }
   ];
 
   return (
@@ -120,7 +64,7 @@ const Testimonials = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Témoignages</h1>
           <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto mb-12">
             Découvrez les expériences de ceux qui ont fait confiance à la sophrologie 
-            "En Vie de Sophro" pour transformer leur quotidien
+            "En Vie de Sophro" pour transformer leur quotidien !
           </p>
           
           {/* Stats */}
@@ -142,6 +86,7 @@ const Testimonials = () => {
       </section>
 
       {/* Testimonials by Category */}
+      
       {testimonials.map((category, categoryIndex) => {
         const CategoryIcon = category.icon;
         return (
@@ -238,7 +183,7 @@ const Testimonials = () => {
           </h2>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-            {['TechCorp Solutions', 'Agence Créative Plus', 'Industries Modernes', 'Théâtre National'].map((company, index) => (
+            {['TechCorp Solutions'].map((company, index) => (
               <div key={index} className="bg-gray-100 p-6 rounded-xl">
                 <div className="bg-gray-300 w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <Building2 className="h-8 w-8 text-gray-600" />
@@ -246,19 +191,6 @@ const Testimonials = () => {
                 <p className="font-semibold text-gray-700">{company}</p>
               </div>
             ))}
-          </div>
-
-          <div className="bg-gray-50 p-8 rounded-2xl max-w-4xl mx-auto">
-            <p className="text-lg text-gray-600 mb-6">
-              "L'authenticité de ces témoignages reflète mon engagement envers chaque personne que j'accompagne. 
-              Chaque parcours est unique et mérite une attention particulière."
-            </p>
-            <div className="flex items-center justify-center space-x-4">
-              <div>
-                <p className="font-bold text-gray-900 text-lg">Bénédicte Lachapelle</p>
-                <p className="text-gray-600">Sophrologue certifiée RNCP</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>

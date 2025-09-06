@@ -30,25 +30,6 @@ const Blog = () => {
               actualités et témoignages seront bientôt disponibles.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-              <div className="text-center p-6 bg-gray-50 rounded-xl">
-                <Calendar className="h-8 w-8 text-[#EC781D] mx-auto mb-4" />
-                <h3 className="font-semibold text-gray-900 mb-2">Articles hebdomadaires</h3>
-                <p className="text-gray-600 text-sm">Conseils et techniques pratiques</p>
-              </div>
-              
-              <div className="text-center p-6 bg-gray-50 rounded-xl">
-                <Clock className="h-8 w-8 text-[#EC781D] mx-auto mb-4" />
-                <h3 className="font-semibold text-gray-900 mb-2">Actualités</h3>
-                <p className="text-gray-600 text-sm">Nouvelles du cabinet et événements</p>
-              </div>
-              
-              <div className="text-center p-6 bg-gray-50 rounded-xl">
-                <h3 className="font-semibold text-gray-900 mb-2">Témoignages</h3>
-                <p className="text-gray-600 text-sm">Retours d'expérience de clients</p>
-              </div>
-            </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/contact" 

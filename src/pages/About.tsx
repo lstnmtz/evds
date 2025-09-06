@@ -5,14 +5,14 @@ const About = () => {
   const milestones = [
     {
       period: "15 ans",
-      company: "Carrefour",
+      company: "Grande distribution",
       role: "Salariée",
       description: "Développement des compétences en relation client et gestion d'équipe",
       icon: Users
     },
     {
       period: "15 ans", 
-      company: "Feu Vert",
+      company: "Service automobile",
       role: "Cheffe d'entreprise",
       description: "Direction d'équipe, gestion d'entreprise et développement commercial",
       icon: Briefcase
@@ -81,18 +81,13 @@ const About = () => {
       <section className="bg-gradient-to-br from-[#EC781D] to-[#d66a0a] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">À propos de Bénédicte</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Bénédicte Lachapelle</h1>
             <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
-              Un parcours professionnel atypique au service de votre épanouissement
+              Sophrologue certifiée RNCP
             </p>
           </div>
           
-          <div className="bg-white bg-opacity-10 rounded-2xl p-8 max-w-4xl mx-auto">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold mb-4">Bénédicte Lachapelle</h2>
-              <p className="text-lg opacity-90">Sophrologue certifiée RNCP</p>
-            </div>
-            
+          <div className="bg-white bg-opacity-10 rounded-2xl p-8 max-w-4xl mx-auto">            
             <p className="text-lg leading-relaxed opacity-90 text-center max-w-3xl mx-auto">
               Après 30 années d'expérience professionnelle en entreprise, j'ai choisi de me reconvertir 
               en sophrologie pour accompagner chacun vers son épanouissement. Mon parcours atypique me 

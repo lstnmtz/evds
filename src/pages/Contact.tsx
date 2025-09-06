@@ -33,19 +33,19 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Téléphone",
-      content: "06 XX XX XX XX",
+      content: "06 72 38 55 82",
       description: "Du lundi au vendredi, 9h-18h"
     },
     {
       icon: Mail,
       title: "Email",
-      content: "contact@enviedesophro.fr",
-      description: "Réponse sous 24h"
+      content: "Benefilippi@hotmail.com",
+      description: "Réponse sous 48h"
     },
     {
       icon: MapPin,
       title: "Localisation",
-      content: "France",
+      content: "La Rivière-de-Corps",
       description: "Séances en présentiel et à distance"
     },
     {

@@ -76,13 +76,26 @@ const Home = () => {
 
           {/* Three Equal Sections */}
           <div
-            className="flex w-screen overflow-hidden"
-            style={{ height: "calc(100vh - 100px)" }} // 100px = hauteur du Header
+            className="flex overflow-hidden"
+            style={{
+              width: "calc(100vw - 21px)", // 6px * 2 (bordures gauche et droite extrêmes)
+              height: "calc(100vh - 80px)", // 90px = hauteur du Header
+              marginLeft: "6px",
+              marginRight: "6px",
+            }}
           >
             {segments.map((segment, idx) => {
               const IconComponent = segment.icon;
               const isDimmed = hoveredIdx !== null && hoveredIdx !== idx;
               const isHovered = hoveredIdx === idx;
+              // Récupère la couleur hex depuis segment.color (ex: bg-[#2362B0] => #2362B0)
+              const borderColor = isHovered
+                ? segment.color.match(/#([0-9A-Fa-f]{6})/)?.[0] || "#EC781D"
+                : "transparent";
+              // Bordure à gauche seulement pour la première, à droite seulement pour la dernière, sinon des deux côtés
+              let borderLeft = idx === 0 ? "6px solid " + borderColor : "none";
+              let borderRight = idx === segments.length - 1 ? "6px solid " + borderColor : "none";
+              let border = idx !== 0 && idx !== segments.length - 1 ? `6px solid ${borderColor}` : undefined;
               return (
                 <Link
                   key={segment.id}
@@ -93,6 +106,9 @@ const Home = () => {
                     transition: "flex-grow 0.3s",
                     minWidth: 0,
                     background: "none",
+                    border: `6px solid ${borderColor}`,
+                    boxSizing: "border-box",
+                    zIndex: isHovered ? 20 : 10,
                   }}
                   onMouseEnter={() => setHoveredIdx(idx)}
                   onMouseLeave={() => setHoveredIdx(null)}
